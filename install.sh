@@ -19,11 +19,6 @@ function install_script {
         exit 1;
     fi
 
-    if [ -e $2 ]; then
-        echo "install_script failed, target file $2 already exists, exiting."
-        exit 1;
-    fi
-
     cp -p $1 $2
     if [ ! -e $2 ]; then
         echo "File $1 failed to copy to $2, exiting.";
@@ -43,4 +38,5 @@ create_directory $HOME/logs
 echo
 echo "Installing scripts"
 
-install_script ./chrome.sh $HOME/bin/chrome
+install_script scripts/bashrc.sh $HOME/.bashrc
+install_script scripts/chrome.sh $HOME/bin/chrome
