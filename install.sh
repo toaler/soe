@@ -40,3 +40,6 @@ echo "Installing scripts"
 
 install_script scripts/bashrc.sh $HOME/.bashrc
 install_script scripts/chrome.sh $HOME/bin/chrome
+install_script scripts/Xmodmap $HOME/.Xmodmap
+
+xmodmap ~/.Xmodmap
