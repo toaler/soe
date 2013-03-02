@@ -127,9 +127,17 @@ fi
 # Set Editor
 export EDITOR=vim
 
+# Set Third Party Tools
+export TPS=$HOME/tps
+
+# Set Java
+export JAVA_HOME=$TPS/jdk/jdk1.7.0_15
+
 # Set Environment name
 export ENVIRONMENT_NAME=${ENVIRONMENT_NAME:-`whoami`}
 export HOST=${HOST:-`hostname`}
+
+export PATH=$PATH:$JAVA_HOME/bin
 
 PS1="`echo ${COLOR_CYAN}`${ENVIRONMENT_NAME}.${HOST}`echo ${COLOR_YELLOW}`[\t] `echo ${COLOR_NONE}`> "'($PWD)
 $ '; export PS1
