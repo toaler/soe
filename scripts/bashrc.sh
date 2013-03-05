@@ -136,11 +136,14 @@ export JAVA_HOME=$TPS/jdk/jdk1.7.0_15
 # Set Eclipse Home
 export ECLIPSE_HOME=$TPS/eclipse
 
+# Set Sun Studio Analyzer
+export SSA_HOME=$TPS/solarisstudio/solarisstudio12.3
+
 # Set Environment name
 export ENVIRONMENT_NAME=${ENVIRONMENT_NAME:-`whoami`}
 export HOST=${HOST:-`hostname`}
 
-export PATH=$PATH:$JAVA_HOME/bin:$ECLIPSE_HOME/eclipse-SDK-4.2.1-linux-gtk-x86_64:$ECLIPSE_HOME/MemoryAnalyzer-1.2.1.20121105-linux
+export PATH=$PATH:$JAVA_HOME/bin:$ECLIPSE_HOME/eclipse-SDK-4.2.1-linux-gtk-x86_64:$ECLIPSE_HOME/MemoryAnalyzer-1.2.1.20121105-linux:$SSA_HOME/bin
 
 
 PS1="`echo ${COLOR_CYAN}`${ENVIRONMENT_NAME}.${HOST}`echo ${COLOR_YELLOW}`[\t] `echo ${COLOR_NONE}`> "'($PWD)
